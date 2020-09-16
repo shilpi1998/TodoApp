@@ -1,0 +1,10 @@
+<h1>Editing Todo Item</h1>
+
+<%= form_for([@todo_list, @todo_list.todo_items.find(params[:id])]) do |f| %>
+ <%= f.text_field :content, placeholder: "New Todo" %>
+ <%= f.datetime_field :due_date, placeholder: "Due Date" %>
+  <%= f.select :priority, ["Highest", "High", "Medium", "Low", "Lowest"] %>
+ <%= f.submit %>
+<% end %>
+
+<td><%= link_to 'Back', @todo_list %></td>

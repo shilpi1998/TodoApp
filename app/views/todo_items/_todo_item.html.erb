@@ -1,0 +1,5 @@
+<p><strong>Todo Tasks: </strong><%= todo_item.content %></p>
+<p><strong>Due Date: </strong><%= todo_item.due_date %></p>
+<p><strong>Priority: </strong><%= todo_item.priority %></p>
+<%= link_to "Delete", todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" } %>
+<%= link_to 'Edit', edit_todo_list_todo_item_path(@todo_list, todo_item.id) %>
